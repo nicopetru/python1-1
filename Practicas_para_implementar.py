@@ -1,9 +1,19 @@
+list = ('ALL UPPER','all lower','mixed UPPER and lower',"","asd","123","123")
 
-capital = input("cuanta plata tenes: ")
-tasa = input("A q tasa: ")
-tiempo = input("Cuantos años la dejas: ")
+def mayusculas(x):
+    if x.strip() == "": return True
+    else:
+        if x.isdigit() == True: return True
+        else:
+#            print("llego aca")
+            return x.isupper()
 
-total = int(capital) *((1+int(tasa)/100)**int(tiempo))
+def otraso(h):
+    return h.upper() == h 
 
-print(total)
 
+for y in list:
+    print(y)
+#    print(type(y))
+    print(mayusculas(y))
+    print(otraso(y))
